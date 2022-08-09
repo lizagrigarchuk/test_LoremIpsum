@@ -468,7 +468,7 @@ body{
             background: rgba(255, 255, 255, 0.7);
             border: 1px solid $colorWhite;   
             cursor: pointer;   
-            &::-webkit-slider-thumb, &::-moz-range-thumb {
+            &::-webkit-slider-thumb{
                 -webkit-appearance: none;
                 background: $colorLightBlue;
                 border: 3px solid $colorDarkBlue;
@@ -477,7 +477,13 @@ body{
                 cursor: pointer;
                 transition: .3s ease-in-out;
             }
-              
+            &::-moz-range-thumb {
+                background: $colorLightBlue;
+                border: 3px solid $colorDarkBlue;
+                @include sizes(27px, 27px);
+                border-radius: 50%;
+                cursor: pointer;
+            }
         }
     }
 

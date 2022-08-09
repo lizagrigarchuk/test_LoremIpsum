@@ -731,7 +731,7 @@ body {
   border: 1px solid #FFFFFF;
   cursor: pointer;
 }
-.order .user__range input[type=range]::-webkit-slider-thumb, .order .user__range input[type=range]::-moz-range-thumb {
+.order .user__range input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: #42A9ED;
   border: 3px solid #286690;
@@ -740,8 +740,15 @@ body {
   border-radius: 50%;
   cursor: pointer;
   -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+.order .user__range input[type=range]::-moz-range-thumb {
+  background: #42A9ED;
+  border: 3px solid #286690;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .order .user__button-send {
   -ms-grid-column: 2;
