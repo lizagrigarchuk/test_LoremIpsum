@@ -786,6 +786,9 @@ footer .footer {
   -ms-grid-columns: auto 40px auto 40px auto;
   grid-template-columns: repeat(3, auto);
   gap: 40px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding: 33px 0;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -841,6 +844,9 @@ footer .footer .payment-methods__item, footer .footer .social-links__item {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 footer .footer .payment-methods__item img, footer .footer .social-links__item img {
   width: 20px;
@@ -865,10 +871,18 @@ footer .footer .social-links__item img {
 
   footer .footer {
     gap: 20px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   footer .footer__payment-methods, footer .footer__social-links {
     padding-left: 20px !important;
     gap: 20px;
+  }
+  footer .footer .payment-methods__item, footer .footer .social-links__item {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 }
 @media (max-width: 991px) {

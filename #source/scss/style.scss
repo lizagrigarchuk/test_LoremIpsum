@@ -509,6 +509,7 @@ footer{
     background: $colorGrey;
     .footer{
         @include grid(repeat(3, auto), $footerSpacing);
+        align-items: flex-end;
         padding: 33px 0;
         @include font($fontLato, 400, 13px, 16px);
         &__copyright{
@@ -544,6 +545,7 @@ footer{
 
         .payment-methods__item, .social-links__item{
             @include flexbox(row);
+            align-items: flex-end;
             img{
                 @include sizes(20px, 20px);
                 margin-right: 10px;
@@ -569,9 +571,13 @@ footer{
     footer {
         .footer{
             gap: 20px;
+            align-items: stretch;
             &__payment-methods, &__social-links {
                 padding-left: 20px !important;
                 gap: 20px;
+            }
+            .payment-methods__item, .social-links__item{
+                align-items: stretch;
             }
         }
     }
