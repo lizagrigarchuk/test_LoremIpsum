@@ -363,6 +363,8 @@ body{
         display: none;
         border-radius: 3px;
         border-top: none;
+        scrollbar-width: thin;
+        scrollbar-color: $colorBlue $colorGrey;
         @include button(1px solid $colorGrey, rgba(39, 39, 51, 0.99), $colorWhite);
         &::-webkit-scrollbar {
             width: 7px;
@@ -388,6 +390,7 @@ body{
             transition: all 0.2s ease-out;
             cursor: pointer;
             overflow: hidden;
+            appearance: none;
             &:hover {    
                 color: $colorLightBlue;
             }
@@ -465,7 +468,7 @@ body{
             background: rgba(255, 255, 255, 0.7);
             border: 1px solid $colorWhite;   
             cursor: pointer;   
-            &::-webkit-slider-thumb {
+            &::-webkit-slider-thumb, &::-moz-range-thumb {
                 -webkit-appearance: none;
                 background: $colorLightBlue;
                 border: 3px solid $colorDarkBlue;
@@ -474,6 +477,7 @@ body{
                 cursor: pointer;
                 transition: .3s ease-in-out;
             }
+              
         }
     }
 
@@ -611,7 +615,7 @@ footer{
                     @include flexbox(row); 
                     @include sizes(80px, 80px);
                 }
-              &-text{
+                &-text{
                     padding: 0;
                     padding-left: 15px;
                 }
@@ -694,9 +698,6 @@ footer{
             }
             &__social-links::before{
                 height: 85px !important;
-            }
-            .payment-methods__item{
-                justify-content: end;
             }
         }
     }
